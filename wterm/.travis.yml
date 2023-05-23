@@ -1,0 +1,15 @@
+sudo: false
+language: rust
+os:
+  - linux
+  - osx
+rust:
+  - stable
+matrix:
+  allow_failures:
+    - rust:
+      - beta
+      - nightly
+script:
+- cargo build
+- cargo test
